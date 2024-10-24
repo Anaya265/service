@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pricing</title>
+    <style>
+         body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-bar {
+      background-color:black;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    .logo {
+      background-color: white;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 29px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .logo span {
+      color: green;
+    }
+
+    .heart-contain {
+            text-align: center;
+        }
+
+        
+        .tex {
+            font-size: 29px;
+            color:black;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            
+        }
+
+    nav {
+      border-top: 3px solid #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 15px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: black;
+    }
+
+    nav ul li::after {
+      content: '';
+      height: 2px;
+      background-color:black;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -5px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    nav ul li:hover::after {
+      transform: scaleX(1);
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-container input[type="text"] {
+      padding: 7px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .search-container button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .search-container button:hover {
+      background-color: #333;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    .heart-container {
+            text-align: center;
+            margin: 50px;
+        }
+
+        
+        .text {
+            font-size: 60px;
+            color:black;
+            font-family: 'Brush Script MT', cursive;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            
+        }
+
+        * {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 22%;
+  margin-left: 110px;
+}
+.box p{
+  text-align: center; 
+  color: #000;
+}
+
+.box h1{
+  color:goldenrod;
+   padding: 15px; 
+    text-align: center;
+}
+
+.box span{
+  border: 1px solid white;
+   background-color: white;
+    padding: 5px; color: #000;
+     border-radius: 10px;
+}
+
+.box a{
+  text-decoration: none;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+footer {
+  background-color: #1a1c24;
+  color:white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+
+    .footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 50px;
+
+}
+
+footer h2{
+  text-align: center;
+  color:white;
+  font-size: 29px;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-weight:bold;
+}
+.footer-logo img {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color:lightgrey;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: none;
+  color: #fff
+}
+
+.footer-section p {
+  font-size: ;
+  line-height: 1.9;
+}
+
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 18px;
+  margin-right: 25px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color:white;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+margin: 0px;
+padding: 0px;
+  
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}
+
+.language-switcher {
+            margin-left: 939px;
+            margin-bottom: 50px;
+
+        }
+        .language-switcher select {
+            background-color:#1a1c24;
+            color:white;
+           border: none;
+           padding: 15px;
+           font-size: 14px;
+        }
+
+
+        
+        .cta-section {
+            margin-top: 60px;
+            padding: 50px;
+            background-color:;
+            color: black;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .cta-section a {
+            background-color: #ff7e5f;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            transition: background-color 0.4s ease;
+        }
+        .cta-section a:hover {
+            background-color: #feb47b;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .pricing-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+
+       
+
+  
+    </style>
+</head>
+<body>
+  
+    <div class="top-bar">
+        <div>September 5, 2024</div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+      
+      <div class="logo">
+        <div class="heart-contain">
+          
+          <div class="tex">  <i class="fa-sharp fa-regular fa-heart"></i> CodeCrafters Hub </div>
+      </div>
+      </div>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Pricing.html">Pricing</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="Contact Us.html">Contact US</a></li>
+        </ul>
+        <div class="search-container">
+          <input type="text" placeholder="Search Website...">
+          <button>Search</button>
+        </div>
+      </nav>
+      <br><br><br>
+
+     
+
+            <!-- Picing Section -->
+      <div class="services-section">
+        <div class="heart-container">
+          <div class="text">  Our Pricing Plans</div>
+</div> 
+
+<br><br>
+<div class="clearfix">
+    <div class="box">
+    <h3 style="border: 1px solid purple; background-color: purple; color: white; padding: 8px;  text-align: center; border-radius: 10px;">Simple Web-Site</h3>
+    <h1> $50 - $100</h1><br>
+    <p>Includes 5 pages</p><hr><br>
+    <p>No Domain</p><hr><br>
+    <p>In Wordpress OR Simple Code </p><hr><br>
+    <p>No support </p><br>
+    <a href="Contact Us.html" ><p style="text-align: center; border: 1px solid purple; background-color: purple; color: white; padding: 10px; border-radius: 10px;">Instant setup, satisfaction guaranteed or your money back.<br><br> <span>Order Now</span></p></a>
+    
+</div>
+    <div class="box">
+    <h3 style="border: 1px solid orange; background-color: orange; color: white; padding: 8px;  text-align: center; border-radius: 10px;">Premium</h3>
+    <h1> $150 - $200</h1><br>
+    <p>Customized Website </p><hr><br>
+    <p>E-Commerce Functionality </p><hr><br>
+    <p>Pre-designed templetes for quick setup </p><hr><br>
+    <p>24/7 support via phone, email, or chat </p><br>
+   <a href="Contact Us.html"  ><p style="text-align: center; border: 1px solid orange; background-color: orange; color: white; padding: 10px; border-radius: 10px;">Instant setup, satisfaction guaranteed or your money back.<br><br> <span >Start Now</span></p></a>
+
+</div>
+    <div class="box">
+    <h3 style="border: 1px solid olivedrab; background-color: olivedrab; color: white; padding: 8px;  text-align: center; border-radius: 10px;">Expert</h3>
+    <h1> $300 - $400 </h1><br>
+    <p>Powerful CRM tools with unlimited support </p><hr><br>
+    <p>Access all modules and features to optimize your buiseness </p><hr><br>
+    <p>Highly Customized website  to your needs </p><hr><br>
+    <p>24/7 customer support available </p><br>
+  <a href="Contact Us.html" " ><p style="text-align: center; border: 1px solid olivedrab; background-color:olivedrab; color: white; padding: 10px; border-radius: 10px;">Instant setup, satisfaction guaranteed or your money back.<br><br> <span >Contact Us</span></p></a>
+
+</div>
+  </div>
+
+  <br><br><br>
+   <!-- Call to Action Section -->
+   <div class="cta-section">
+    <h2>Ready to Get Started?</h2>
+    <p>Contact us today to discuss your project and get a free quote!</p>
+    <a href="Contact Us.html">Contact Us</a>
+</div>
+</div>
+
+  <br><br><br><br><br>
+
+  
+  <footer>
+    <br><br><br>
+    <h2> CodeCrafters Hub</h2>
+    <br><br><br>
+    <div class="language-switcher">
+      <select>
+          <option value="en">English</option>
+          <option value="ur">Urdu</option>
+          <option value="">الْعَرَبيّة </option>
+          <option>  简体中文</option>
+          <option>  繁體中文</option>
+          <option> Čeština</option>
+          <option>  Nederlands</option>
+          <option>  Suomi</option>
+          <option> Français</option>
+          <option> Deutsch</option>
+          <option>  Español</option>
+           <option> ภาษาไทย</option>
+          <option>  Türkçe</option>
+          <option>  українська</option>
+          <option>  Tiếng Việt</option>
+      </select>
+      <hr style="width: 40%; text-align: center;">
+  </div>
+    <div class="footer-container">
+      <div class="footer-logo">
+      </div>
+      <div class="footer-section">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">Forums</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+        <h3>Open Source</h3>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+           <li><a href="#">Contribute</a></li>
+            <li><a href="#">Licenses</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Upgrade</a></li>
+          <li><a href="#">Custom Developments</a></li>
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Custom Solutions</a></li>
+          <li><a href="#">App Development</a></li>
+        </ul>
+      </div>
+  
+      
+      <div class="footer-section">
+        <h3>About us</h3>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Legal • Privacy</a></li>
+          <li><a href="#">Security</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section language-dropdown">
+        <div class="dropdown">
+           
+          <p>CodeCrafters Hub is a suite of open-source tools tailored for freelancers and small businesses. It addresses essential needs like client management (CRM), project tracking, invoicing, time management, and more. With an intuitive and user-friendly interface, CodeCrafters Hub integrates everything in one place,
+            simplifying the management and growth of your freelancing business.</p>
+     </div>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-phone"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Website made with DevWave Solutions</p>
+  <br>
+    </div>
+  </footer>
+</body>
+</html>

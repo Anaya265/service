@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Services</title>
+    <style>
+ body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .top-bar {
+      background-color:black;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    .logo {
+      background-color: white;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 29px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .logo span {
+      color: green;
+    }
+
+    .heart-contain {
+            text-align: center;
+        }
+
+        
+        .tex {
+            font-size: 29px;
+            color:black;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            
+        }
+
+    nav {
+      border-top: 3px solid #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 15px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: black;
+    }
+
+    nav ul li::after {
+      content: '';
+      height: 2px;
+      background-color:black;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -5px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    nav ul li:hover::after {
+      transform: scaleX(1);
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-container input[type="text"] {
+      padding: 7px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .search-container button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .search-container button:hover {
+      background-color: #333;
+    }
+
+   .needs{
+    text-align: center;
+    font-family: 'Brush Script ', cursive;
+
+   } 
+
+   .services-section {
+      padding: 60px 0;
+      text-align: center;
+      color: #000;
+    }
+
+    .services-section h2 {
+      font-size: 40px;
+      margin-bottom: 40px;
+      color: black;
+    }
+
+    .services-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .service-card {
+      background-color: white;
+      padding: 20px;
+      margin: 30px;
+      width: 350px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-card img {
+      width: 100%;
+      height:270px ;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: black;
+    }
+
+    .service-card p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .service-card a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .service-card a:hover {
+      background-color: #333;
+    }
+    
+
+    
+    .faq-container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            color: #000;
+        }
+        .faq-column {
+            width: 48%;
+        }
+        .faq {
+            cursor: pointer;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+        .faq h3 {
+            margin: 0;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 15px;
+            display: none;
+    
+        }
+        .faq.active .faq-answer {
+            display: block;
+        }
+
+
+        footer {
+  background-color: #1a1c24;
+  color:white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+
+    .footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 50px;
+
+}
+
+footer h2{
+  text-align: center;
+  color:white;
+  font-size: 29px;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-weight:bold;
+}
+.footer-logo img {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color:lightgrey;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: none;
+  color: #fff
+}
+
+.footer-section p {
+  font-size: ;
+  line-height: 1.9;
+}
+
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 18px;
+  margin-right: 25px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color:white;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+margin: 0px;
+padding: 0px;
+  
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}
+
+.language-switcher {
+            margin-left: 939px;
+            margin-bottom: 50px;
+
+        }
+        .language-switcher select {
+            background-color:#1a1c24;
+            color:white;
+           border: none;
+           padding: 15px;
+           font-size: 14px;
+        }
+
+
+
+
+        h1 {
+            font-size: 36px;
+            margin-top: 50px;
+            color: #333;
+            font-family: 'Brush Script MT', cursive;
+            text-align: center;
+
+        }
+
+        p.description {
+            font-size: 16px;
+            color: black;
+            margin-bottom: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .service-box {
+            width: 250px;
+            background-color: #fff;
+            border: ;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            transition: box-shadow 0.3s;
+        }
+
+        .service-box:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            background-color: black;
+            border-radius: 50%;
+            width: 89px;
+            height: 89px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+        }
+
+        .service-icon img {
+            width: 49px;
+            height: 40px;
+        }
+
+        .service-box h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        .service-box p {
+            font-size: 14px;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        .learn-more {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: black;
+            color: #fff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .learn-more:hover {
+            background-color:gray;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+  <div>September 5, 2024</div>
+  <div>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact Us</a>
+  </div>
+</div>
+
+<div class="logo">
+  <div class="heart-contain">
+    
+    <div class="tex">  <i class="fa-sharp fa-regular fa-heart"></i>CodeCrafters Hub </div>
+</div>
+</div>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="Pricing.html">Pricing</a></li>
+    <li><a href="About.html">About Us</a></li>
+    <li><a href="Contact Us.html">Contact US</a></li>
+  </ul>
+  <div class="search-container">
+    <input type="text" placeholder="Search Website...">
+    <button>Search</button>
+  </div>
+</nav>
+<br><br><br>
+<h1>My Web Development Services</h1>
+<p class="description">Offering top-notch web development services with expertise in HTML, CSS, JavaScript, and PHP.</p>
+
+<div class="services-container">
+    <div class="service-box">
+        <div class="service-icon">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/strategy-board.png" alt="HTML Icon">
+        </div>
+        <h3>HTML Development</h3>
+        <p>Building well-structured and responsive web pages using modern HTML5 standards.</p>
+    </div>
+    <div class="service-box">
+        <div class="service-icon">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/css-filetype.png" alt="CSS Icon">
+        </div>
+        <h3>CSS Styling</h3>
+        <p>Creating visually appealing designs and layouts with CSS3 and frameworks like Bootstrap.</p>
+    </div>
+    <div class="service-box">
+        <div class="service-icon">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/javascript.png" alt="JavaScript Icon">
+        </div>
+        <h3>JavaScript Programming</h3>
+        <p>Adding interactivity and dynamic functionality to websites using JavaScript and jQuery.</p>
+    </div>
+    <div class="service-box">
+        <div class="service-icon">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/php-logo.png" alt="PHP Icon">
+        </div>
+        <h3>PHP Development</h3>
+        <p>Creating dynamic and database-driven websites using PHP and MySQL.</p>
+    </div>
+    <div class="service-box">
+        <div class="service-icon">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/design.png" alt="Web Design Icon">
+        </div>
+        <h3>Responsive Web Design</h3>
+        <p>Designing mobile-friendly, responsive layouts to ensure smooth user experiences on any device.</p>
+    </div>
+    <div class="service-box">
+        <div class="service-icon">
+            <img src="https://thumbs.dreamstime.com/b/seoline-thin-line-black-color-flat-simple-vector-symbols-illustration-seo-icon-white-background-eps-338063183.jpg" alt="SEO Icon">
+        </div>
+        <h3>SEO Optimization</h3>
+        <p>Implementing SEO best practices to help websites rank better on search engines.</p>
+    </div>
+</div>
+
+<a href="#" class="learn-more">Learn More</a>
+
+<br><br><br>  
+  <h1 style="margin-left: 190px;">Frequently Asked Questions        </h1>
+<br><br>
+     <div class="faq-container">
+        
+        <div class="faq-column">
+            <div class="faq">
+                <h3>How can I hire a freelance web developer? <span>&#x25BC;</span></h3>
+                <div class="faq-answer">
+                    <p>You can contact me directly via the 'Contact Us' section or visit my Upwork/Fiverr profile to initiate a project.                    </p>
+                    
+                </div>
+            </div>
+            <div class="faq">
+                <h3>What is the process of working with a freelance web developer?<span>&#x25BC;</span></h3>
+
+                <div class="faq-answer">
+                  <p>First, we understand your requirements, then proceed to planning, followed by design and development phases. After delivery, revisions and feedback are also considered.
+                  </p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3> How do you estimate the project cost? <span>&#x25BC;</span></h3>
+
+
+                <div class="faq-answer">
+<p>The cost depends on the complexity, features, and timeline of the project. An accurate estimate is given after a detailed discussion.
+</p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3>What is the delivery time?<span>&#x25BC;</span></h3>
+
+
+                <div class="faq-answer">
+<p>The delivery time depends on the project’s scope and complexity. Smaller projects usually take a few days, while larger projects may take more time.
+</p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3> How can I manage my website after development? <span>&#x25BC;</span></h3>
+
+
+                <div class="faq-answer">
+<p>After completion, I provide an easy-to-understand guide and support so that you can manage your website on your own.
+</p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3>Will my website be mobile-friendly? <span>&#x25BC;</span></h3>
+
+
+                <div class="faq-answer">
+<p>Yes, I design every website to be responsive, ensuring it works perfectly on all devices, whether mobile or desktop.
+</p>
+                </div>
+            </div>
+        </div>
+        <div class="faq-column">
+            <div class="faq">
+                <h3>What if I want to make changes to the project? <span>&#x25BC;</span></h3>
+
+
+                <div class="faq-answer">
+                   <p>You can always contact me during the project for changes. Initial revisions are usually free, but major changes may incur additional charges.
+                  </p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3> Do you offer SEO services?<span>&#x25BC;</span></h3>
+
+
+                <div class="faq-answer">
+<p>Yes, I provide basic on-page SEO services to help your website rank in search engines. Advanced SEO services can be discussed separately.
+</p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3>Can you help with website hosting and domain registration?<span>&#x25BC;</span></h3>
+
+
+                <div class="faq-answer">
+                  <p>Yes, I can assist with website hosting and domain registration to ensure your website goes online smoothly.
+                  </p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3>How do support and maintenance work?<span>&#x25BC;</span></h3>
+
+
+                <div class="faq-answer">
+                  <p>Even after project completion, I provide support and maintenance services to keep your website up-to-date and running smoothly.
+                  </p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3>Do you develop e-commerce websites?<span>&#x25BC;</span></h3>
+
+
+                <div class="faq-answer">
+                  <p>Yes, I develop e-commerce websites with secure payment gateways and a user-friendly shopping experience.
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq').forEach(faq => {
+            faq.addEventListener('click', () => {
+                faq.classList.toggle('active');
+                let span = faq.querySelector('h3 span');
+                span.textContent = faq.classList.contains('active') ? '\u25B2' : '\u25BC';
+            });
+        });
+    </script>
+
+<br><br><br><br>
+
+<footer>
+  <br><br><br>
+  <h2> CodeCrafters Hub</h2>
+  <br><br><br>
+  <div class="language-switcher">
+    <select>
+        <option value="en">English</option>
+        <option value="ur">Urdu</option>
+        <option value="">الْعَرَبيّة </option>
+        <option>  简体中文</option>
+        <option>  繁體中文</option>
+        <option> Čeština</option>
+        <option>  Nederlands</option>
+        <option>  Suomi</option>
+        <option> Français</option>
+        <option> Deutsch</option>
+        <option>  Español</option>
+         <option> ภาษาไทย</option>
+        <option>  Türkçe</option>
+        <option>  українська</option>
+        <option>  Tiếng Việt</option>
+    </select>
+    <hr style="width: 40%; text-align: center;">
+</div>
+  <div class="footer-container">
+    <div class="footer-logo">
+    </div>
+    <div class="footer-section">
+      <h3>Community</h3>
+      <ul>
+        <li><a href="#">Tutorials</a></li>
+        <li><a href="#">Forums</a></li>
+        <li><a href="#">Blogs</a></li>
+      </ul>
+      <h3>Open Source</h3>
+      <ul>
+        <li><a href="#">GitHub</a></li>
+         <li><a href="#">Contribute</a></li>
+          <li><a href="#">Licenses</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Upgrade</a></li>
+        <li><a href="#">Custom Developments</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">Custom Solutions</a></li>
+        <li><a href="#">App Development</a></li>
+      </ul>
+    </div>
+
+    
+    <div class="footer-section">
+      <h3>About us</h3>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Legal • Privacy</a></li>
+        <li><a href="#">Security</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section language-dropdown">
+      <div class="dropdown">
+         
+        <p>CodeCrafters Hub is a suite of open-source tools tailored for freelancers and small businesses. It addresses essential needs like client management (CRM), project tracking, invoicing, time management, and more. With an intuitive and user-friendly interface, CodeCrafters Hub integrates everything in one place,
+          simplifying the management and growth of your freelancing business.</p>
+   </div>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-phone"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Website made with DevWave Solutions</p>
+<br>
+  </div>
+</footer>
+</body>
+</html>

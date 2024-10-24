@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>HOME</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-bar {
+      background-color:black;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    .logo {
+      background-color: white;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 29px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .logo span {
+      color: green;
+    }
+
+    .heart-contain {
+            text-align: center;
+        }
+
+        
+        .tex {
+            font-size: 29px;
+            color:black;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            
+        }
+
+    nav {
+      border-top: 3px solid #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 15px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: black;
+    }
+
+    nav ul li::after {
+      content: '';
+      height: 2px;
+      background-color:black;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -5px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    nav ul li:hover::after {
+      transform: scaleX(1);
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-container input[type="text"] {
+      padding: 7px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .search-container button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .search-container button:hover {
+      background-color: #333;
+    }
+
+
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    .hero-section {
+      background-image: url('https://www.michaelpage.com.hk/sites/michaelpage.com.hk/files/2022-05/Software%20Developer.jpg'); /* Background image link */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      z-index: 1;
+    }
+
+    .hero-content {
+      z-index: 2;
+      max-width: 700px;
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .contact-link {
+    background-color: #ff6b6b;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+    }
+
+   
+    .contact-link:hover {
+      background-color: #333;
+    }
+
+
+    section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 46px;
+            margin-bottom: 20px;
+            color: #000;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+        section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            max-width: 700px;
+            margin: auto;
+            color: #666;
+            font-family: 'Brush Script ', cursive;
+
+        }
+        .btn-secondary {
+           background-color: #ff6b6b;
+           color: white;
+           padding: 15px 30px;
+           border-radius: 25px;
+           text-decoration: none;
+           font-size: 1.2rem;
+          transition: background-color 0.3s;
+        }
+
+       
+    
+    .heart-container {
+            text-align: center;
+            margin: 50px;
+        }
+
+        
+        .text {
+            font-size: 60px;
+            color:black;
+            font-family: 'Brush Script MT', cursive;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            
+        }
+
+       
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .service {
+            text-align: center;
+            padding: 20px;
+            max-width: 300px;
+
+        }
+        .service img {
+            background-color: 20px;
+        }
+        .why-choose-me {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .reason {
+            text-align: center;
+            padding: 20px;
+            max-width: 300px;
+            color: #000;
+            font-family: 'Brush Script ', cursive;
+
+        }
+        .reason img {
+            height: 160px;
+            width: 90%;
+           border-radius: 10px;
+        }
+    footer {
+  background-color: #1a1c24;
+  color:white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+
+    .footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 50px;
+
+}
+
+footer h2{
+  text-align: center;
+  color:white;
+  font-size: 29px;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-weight:bold;
+}
+.footer-logo img {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color:lightgrey;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: none;
+  color: #fff
+}
+
+.footer-section p {
+  font-size: ;
+  line-height: 1.9;
+}
+
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color:white;
+
+  font-size: 18px;
+  margin-right: 25px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color:white;
+}
+
+.footer-bottom {
+  background-color:;
+  text-align: center;
+  border-top: 1px solid #333;
+margin: 0px;
+padding: 0px;
+  
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}
+
+
+
+
+.text-block {
+  position: absolute;
+  bottom: 90px;
+  color: white;
+  font-size: 35px;
+  padding-left: 0px;
+  padding-right: 20px;
+  margin-left: 30px;
+ 
+}
+
+.heart-conta {
+            text-align: center;
+            margin: 50px;
+        }
+
+
+        .test {
+            font-size: 60px;
+            color:black;
+            font-family: 'Brush Script MT', cursive;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .portfolio h2 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+
+        .portfolio .projects {
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        .project {
+            width: 26%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+        }
+
+        .project h1 {
+            margin: 10px;
+            color: #000;
+        }
+
+
+
+        .language-switcher {
+            margin-left: 939px;
+            margin-bottom: 50px;
+
+        }
+        .language-switcher select {
+            background-color:#1a1c24;
+            color:white;
+           border: none;
+           padding: 15px;
+           font-size: 14px;
+        }
+
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div>September 5, 2024</div>
+  <div>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact Us</a>
+  </div>
+</div>
+
+<div class="logo">
+  <div class="heart-contain">
+    
+    <div class="tex">  <i class="fa-sharp fa-regular fa-heart"></i> CodeCrafters Hub </div>
+</div>
+</div>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="Pricing.html">Pricing</a></li>
+    <li><a href="About.html">About Us</a></li>
+    <li><a href="Contact Us.html">Contact US</a></li>
+  </ul>
+  <div class="search-container">
+    <input type="text" placeholder="Search Website...">
+    <button>Search</button>
+  </div>
+</nav>
+<br><br><br>
+<div class="hero-section">
+  <div class="hero-content">
+    <h1>Welcome to our Portfolio Website.</h1>
+    <p>
+      I am a dedicated freelancer specializing in web development, design, and digital solutions. With a passion for creativity and a commitment to excellence, I strive to deliver top-notch services that exceed expectations. Let's work together to bring your ideas to life!
+    </p>
+    <br><br>
+    <a href="Contact Us.html" class="contact-link">Contact Us</a>
+  </div>
+</div>
+
+
+<section>
+  <h2>Who I Am</h2>
+  <br><br>
+  <p>I am a professional web developer specializing in building websites for small businesses and freelancers. With a focus on clean design, responsive layouts, and modern technology, I help my clients stand out online.</p>
+  <br><br><br>
+  <a href="About.html" class="btn btn-secondary">Learn More</a>
+</section>
+
+
+<br>
+ 
+ <!-- Why Choose Me Section -->
+ <section>
+  <h2>Why Choose Me</h2>
+  <br><br>
+  <p>With  years of experience in web development, I bring creativity, technical expertise, and a focus on delivering results that align with your business goals. Here are a few reasons to work with me:</p>
+<br><br><br><br>
+  <div class="why-choose-me">
+      <div class="reason">
+          <img src="https://www.shutterstock.com/image-photo/business-person-process-workflow-automation-260nw-2317592335.jpg" alt="Experience">
+          <br><br>
+          <h3>Proven Experience</h3>
+          <br>
+          <p>Over 3 years of experience in creating high-quality, functional websites for a wide range of clients.</p>
+      </div>
+      <div class="reason">
+          <img src="https://media.licdn.com/dms/image/v2/D5622AQHj6pT-e7Xn1w/feedshare-shrink_800/feedshare-shrink_800/0/1722634610787?e=2147483647&v=beta&t=xbdT_iJ0iyGuPR3B9W3OuLfmUHdr3heJ9k5qlqyTNpc" alt="Client Focus">
+          <br><br>
+          <h3>Client-Centered Approach</h3>
+          <br>
+          <p>I take the time to understand your needs and ensure my work delivers value to your business.</p>
+      </div>
+      <div class="reason">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/006/161/766/small/business-people-working-and-green-renewable-energy-worker-interface-concept-of-sustainability-photo.jpg" alt="Innovation">
+          <br><br>
+          <h3>Innovative Solutions</h3>
+          <br>
+          <p>I stay updated with the latest trends and technologies to offer you cutting-edge solutions.</p>
+      </div>
+  </div>
+</section>
+
+
+<br><br><br><br><br><br>
+
+
+<footer>
+  <br><br><br>
+  <h2> CodeCrafters Hub</h2>
+  <br><br><br>
+  <div class="language-switcher">
+    <select>
+        <option value="en">English</option>
+        <option value="ur">Urdu</option>
+        <option value="">الْعَرَبيّة </option>
+        <option>  简体中文</option>
+        <option>  繁體中文</option>
+        <option> Čeština</option>
+        <option>  Nederlands</option>
+        <option>  Suomi</option>
+        <option> Français</option>
+        <option> Deutsch</option>
+        <option>  Español</option>
+         <option> ภาษาไทย</option>
+        <option>  Türkçe</option>
+        <option>  українська</option>
+        <option>  Tiếng Việt</option>
+    </select>
+    <hr style="width: 40%; text-align: center;">
+</div>
+  <div class="footer-container">
+    <div class="footer-logo">
+    </div>
+    <div class="footer-section">
+      <h3>Community</h3>
+      <ul>
+        <li><a href="#">Tutorials</a></li>
+        <li><a href="#">Forums</a></li>
+        <li><a href="#">Blogs</a></li>
+      </ul>
+      <h3>Open Source</h3>
+      <ul>
+        <li><a href="#">GitHub</a></li>
+         <li><a href="#">Contribute</a></li>
+          <li><a href="#">Licenses</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Upgrade</a></li>
+        <li><a href="#">Custom Developments</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">Custom Solutions</a></li>
+        <li><a href="#">App Development</a></li>
+      </ul>
+    </div>
+
+    
+    <div class="footer-section">
+      <h3>About us</h3>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Legal • Privacy</a></li>
+        <li><a href="#">Security</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section language-dropdown">
+      <div class="dropdown">
+         
+      <p>CodeCrafters Hub is a suite of open-source tools tailored for freelancers and small businesses. It addresses essential needs like client management (CRM), project tracking, invoicing, time management, and more. With an intuitive and user-friendly interface, CodeCrafters Hub integrates everything in one place,
+         simplifying the management and growth of your freelancing business.</p>
+  </div>
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-phone"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Website made with DevWave Solutions</p>
+<br>
+  </div>
+</footer>
+</body>
+</html>

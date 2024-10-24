@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>About Us - Freelance Web Developer</title>
+    <style>
+       body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-bar {
+      background-color:black;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    .logo {
+      background-color: white;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 29px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .logo span {
+      color: green;
+    }
+
+    .heart-contain {
+            text-align: center;
+        }
+
+        
+        .tex {
+            font-size: 29px;
+            color:black;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            
+        }
+
+    nav {
+      border-top: 3px solid #333;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 15px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: black;
+    }
+
+    nav ul li::after {
+      content: '';
+      height: 2px;
+      background-color:black;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -5px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    nav ul li:hover::after {
+      transform: scaleX(1);
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-container input[type="text"] {
+      padding: 7px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .search-container button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .search-container button:hover {
+      background-color: #333;
+    }
+    .header {
+            text-align: center;
+        }
+
+        .header h1 {
+            
+            font-size: 29px;
+            color:black;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .header p {
+          font-size: 29px;
+          color: black;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .about-section {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .content h2 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Brush Script ', cursive;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            border: 4px solid white;
+        }
+
+        .profile h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-family: 'Brush Script', cursive;
+        }
+
+        .profile p {
+            font-size: 16px;
+            color: #777;
+            font-family: 'Brush Script ', cursive;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                height: 40vh;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .header p {
+                font-size: 14px;
+            }
+
+            .content h2 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .profile h3 {
+                font-size: 20px;
+            }
+
+            .profile p {
+                font-size: 14px;
+            }
+        }
+
+        footer {
+  background-color: #1a1c24;
+  color:white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+
+    .footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 50px;
+
+}
+
+footer h2{
+  text-align: center;
+  color:white;
+  font-size: 29px;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-weight:bold;
+}
+.footer-logo img {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color:lightgrey;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: none;
+  color: #fff
+}
+
+.footer-section p {
+  font-size: ;
+  line-height: 1.9;
+}
+
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 18px;
+  margin-right: 25px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color:white;
+}
+
+.footer-bottom {
+  background-color:;
+  text-align: center;
+  border-top: 1px solid #333;
+margin: 0px;
+padding: 0px;
+  
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}
+
+.language-switcher {
+            margin-left: 939px;
+            margin-bottom: 50px;
+
+        }
+        .language-switcher select {
+            background-color:#1a1c24;
+            color:white;
+           border: none;
+           padding: 15px;
+           font-size: 14px;
+        }
+
+
+
+        .why-choose-me {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .reason {
+            text-align: center;
+            padding: 20px;
+            max-width: 300px;
+            color: #000;
+            font-family: 'Brush Script ', cursive;
+
+        }
+        .reason img {
+            height: 160px;
+            width: 90%;
+           border-radius: 10px;
+        }
+
+        section h2 {
+            font-size: 46px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #000;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+        section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            max-width: 700px;
+            margin: auto;
+            color: #666;
+            font-family: 'Brush Script ', cursive;
+
+        }
+
+    </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div>September 5, 2024</div>
+    <div>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+  
+  <div class="logo">
+    <div class="heart-contain">
+      
+      <div class="tex">  <i class="fa-sharp fa-regular fa-heart"></i>CodeCrafters Hub   </div>
+  </div>
+  </div>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Services.html">Services</a></li>
+      <li><a href="Pricing.html">Pricing</a></li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="Contact Us.html">Contact US</a></li>
+    </ul>
+    <div class="search-container">
+      <input type="text" placeholder="Search Website...">
+      <button>Search</button>
+    </div>
+  </nav>
+  <br><br><br>
+
+    <header class="header">
+        <div>
+            <h1>About Us</h1>
+            <p>We build amazing websites and provide top-notch development services!</p>
+        </div>
+    </header>
+
+   
+
+            <br><br><br>
+            <!-- Why Choose Me Section -->
+ <section>
+  <h2>Recent Projects</h2>
+  <br><br>
+          <p>"Here are some of the recent projects I've worked on, showcasing my skills in web development, design, and coding. Each project reflects my dedication to delivering high-quality,
+             responsive, and user-friendly websites tailored to meet client needs."</p>
+<br><br><br><br>
+  <div class="why-choose-me">
+      <div class="reason">
+        <a href="https://respies.vercel.app/" ><img src="https://thumbs.dreamstime.com/b/recipe-word-text-green-leaf-logo-icon-design-black-background-suitable-card-typography-147082451.jpg" alt="Project 1"></a>
+
+          <br><br>
+          <h3>RESPIES</h3>
+          <br>
+<p>This project showcases a collection of delicious and easy-to-make recipes, perfect for food enthusiasts looking for inspiration. Each recipe is designed with simple instructions and
+   ingredients, ensuring that anyone can create amazing dishes at home."</p>          
+      </div>
+      <div class="reason">
+        <a href="https://reservations-bice.vercel.app/index.html" > <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJSZiNhs-dhULzWmMTm9Jr2fUAUI2mOnnf1g&s" alt="Project 2"></a>
+
+          <br><br>
+          <h3>Kokkari | Evvia</h3>
+          <br>
+          <p>"Kokkari | Evvia brings together the essence of Mediterranean cuisine with a collection of carefully crafted recipes. This project is perfect for those who love to explore rich, traditional flavors
+             while enjoying simple yet satisfying meals."</p>
+          
+      </div>
+      <div class="reason">
+        <a href="https://khadithreadscollection.vercel.app/"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/292dd6189542947.Y3JvcCwzMzMzLDI2MDcsMCwzNjM.jpg" alt="Project 3"></a>
+
+          <br><br>
+          <h3>Khadi Collection</h3>
+          <br>
+          <p>"Khadi Collection is a tribute to timeless craftsmanship and natural fabrics. This project showcases a range of handcrafted clothing made from 100% organic cotton, celebrating the art of sustainable and eco-friendly fashion.
+             Each piece reflects the beauty of simplicity and tradition."</p>
+          
+      </div>
+  </div>
+</section>
+<br><br><br>
+<section class="about-section">
+  <div class="container">
+      <div class="content">
+          <h2>Behind the Success</h2>
+          <p>
+              As a freelance web developer, I have been working tirelessly to bring the best web development solutions to my clients. My journey started with a passion for coding, which led to countless successful projects across various industries. I specialize in creating responsive, user-friendly websites that not only look great but also provide seamless functionality. My mission is to help businesses grow by providing top-notch web development services tailored to their needs.
+          </p>
+      </div>
+
+
+            <div class="profile">
+                <img src="https://cdn4.sharechat.com/img_792181_376217f2_1672679789418_sc.jpg?tenant=sc&referrer=tag-service&f=418_sc.jpg" alt="Profile Picture">
+           <h3>Shanzy khan</h3>
+                <p>Freelance Web Developer</p>
+            </div>
+        </div>
+    </section>
+
+    <br>
+ 
+ 
+
+
+    <br><br><br><br>
+
+    <footer>
+      <br><br><br>
+      <h2>CodeCrafters Hub</h2>
+      <br><br><br>
+      <div class="language-switcher">
+        <select>
+            <option value="en">English</option>
+            <option value="ur">Urdu</option>
+            <option value="">الْعَرَبيّة </option>
+            <option>  简体中文</option>
+            <option>  繁體中文</option>
+            <option> Čeština</option>
+            <option>  Nederlands</option>
+            <option>  Suomi</option>
+            <option> Français</option>
+            <option> Deutsch</option>
+            <option>  Español</option>
+             <option> ภาษาไทย</option>
+            <option>  Türkçe</option>
+            <option>  українська</option>
+            <option>  Tiếng Việt</option>
+        </select>
+        <hr style="width: 40%; text-align: center;">
+    </div>
+      <div class="footer-container">
+        <div class="footer-logo">
+        </div>
+        <div class="footer-section">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Forums</a></li>
+            <li><a href="#">Blogs</a></li>
+          </ul>
+          <h3>Open Source</h3>
+          <ul>
+            <li><a href="#">GitHub</a></li>
+             <li><a href="#">Contribute</a></li>
+              <li><a href="#">Licenses</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Upgrade</a></li>
+            <li><a href="#">Custom Developments</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Custom Solutions</a></li>
+            <li><a href="#">App Development</a></li>
+          </ul>
+        </div>
+    
+        
+        <div class="footer-section">
+          <h3>About us</h3>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Legal • Privacy</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section language-dropdown">
+          <div class="dropdown">
+             
+            <p>CodeCrafters Hub is a suite of open-source tools tailored for freelancers and small businesses. It addresses essential needs like client management (CRM), project tracking, invoicing, time management, and more. With an intuitive and user-friendly interface, CodeCrafters Hub integrates everything in one place,
+              simplifying the management and growth of your freelancing business.</p>
+       </div>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-phone"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Website made with DevWave Solutions</p>
+    <br>
+      </div>
+    </footer>
+</body>
+</html>
